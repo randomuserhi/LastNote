@@ -1,9 +1,9 @@
 // ELECTRON DOCS LINK: 
 // (https://www.electronjs.org/docs/latest/api/app)
 
-const { app, BrowserWindow, ipcMain } = require("electron"); // Import app, BrowserWindow, ipcMain from electron module
-const path = require("path"); // Import path module
-const fs = require("fs"); // Import file system module
+const { app, BrowserWindow, ipcMain } = require("electron"); // Import app, BrowserWindow, ipcMain from electron module (https://www.electronjs.org/docs/latest/api/app)
+const path = require("path"); // Import path module (https://nodejs.org/api/path.html)
+const fs = require("fs"); // Import file system module (https://nodejs.org/api/fs.html)
 
 let win; // Global variable to store main window
 
