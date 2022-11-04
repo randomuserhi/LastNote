@@ -36,7 +36,7 @@ async function CreateWindow()
  */
 function doSomething(param, otherParam)
 {
-	return "so string";
+	return "some string";
 }
 
 app.on("ready", CreateWindow); // call createWindow function on "ready" event from app
