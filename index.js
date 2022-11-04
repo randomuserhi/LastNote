@@ -41,7 +41,9 @@ function doSomething(param, otherParam)
 
 app.on("ready", CreateWindow); // call createWindow function on "ready" event from app
 app.on("window-all-closed", function(){ // quit app on "window-all-closed" event from app
-    if(process.platform !== "darwin"){ // If the platform is darwin (https://en.wikipedia.org/wiki/Darwin_(operating_system)) then call app.quit() to finalize
+	// If the platform is darwin (https://en.wikipedia.org/wiki/Darwin_(operating_system)) then call app.quit() to finalize
+	// This has to be done due to: (https://stackoverflow.com/questions/48593064/closing-an-electron-app-on-darwin)
+    if(process.platform !== "darwin"){ 
         app.quit();
     }
 });
