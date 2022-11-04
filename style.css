@@ -8,6 +8,10 @@
 /**
  * - "win" refers to window elements
  * - "lastnote" refers to my custom base css assets ("lastnote" is simply the name of my project)
+ *
+ * When writing css its useful to group common attributes and assign overrides, especially since it doesn't natively support
+ * composites:
+ * - (https://stackoverflow.com/a/19968784)
  */
 
 * {
