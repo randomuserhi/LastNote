@@ -37,6 +37,11 @@ body {
     background: transparent;
 }
 
+/**
+ * Overrides for the flexbox attributes I use so I do not have to worry about
+ * browser compatability in html, and only add them here
+ */
+
 .lastnote-flex {
 	display: -webkit-box;
     display: -ms-flexbox;
@@ -73,6 +78,10 @@ body {
     -ms-flex-align: stretch;
     align-items: stretch;
 }
+
+/**
+ * Window styles
+ */
 
 .win-appMount {
 	position: absolute;
