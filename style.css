@@ -135,3 +135,11 @@ body {
 .win-titleButton:hover {
     background-color: var(--win-titleButton-hoverColor);
 }
+
+.win-titleText {
+    margin-left: 10px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
