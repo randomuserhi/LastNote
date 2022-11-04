@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require("electron");
+const { contextBridge, ipcRenderer } = require("electron"); // Import contextBridge, ipcRenderer from electron module
 
 // Expose methods to the renderer process such that the
 // ipcRenderer can be used without exposing the entire object
