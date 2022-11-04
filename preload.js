@@ -8,13 +8,13 @@ const { contextBridge, ipcRenderer } = require("electron"); // Import contextBri
 contextBridge.exposeInMainWorld(
     "api", {
         closeWindow: () => { // When window.api.closeWindow() is called, send "closeWindow" event to ipcMain
-            ipcRenderer.send('closeWindow');
+            ipcRenderer.send("closeWindow");
         },
         minimizeWindow: () => { // When window.api.closeWindow() is called, send "minimizeWindow" event to ipcMain
-            ipcRenderer.send('minimizeWindow');
+            ipcRenderer.send("minimizeWindow");
         },
         maximizeWindow: () => { // When window.api.closeWindow() is called, send "maximizeWindow" event to ipcMain
-            ipcRenderer.send('maximizeWindow');
+            ipcRenderer.send("maximizeWindow");
         }
     }
 );
