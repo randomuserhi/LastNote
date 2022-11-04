@@ -106,6 +106,11 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.win-container, .win-appMount, body, html {
+    height: 100%;
+    width: 100%;
+}
+
 .win-appMount, body, html {
     height: 100%;
     width: 100%;
