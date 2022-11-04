@@ -20,7 +20,7 @@ async function CreateWindow()
 		webPreferences: {
 	        nodeIntegration: false, // is default value after Electron v5 - is disabled as per security (https://www.electronjs.org/docs/latest/tutorial/security)
 			contextIsolation: true, // protect against prototype pollution - (https://www.electronjs.org/docs/latest/tutorial/context-isolation)
-			enableRemoteModule: false, // turn off remote - (https://www.npmjs.com/package/@electron/remote) 
+			enableRemoteModule: false, // turn off remote (optional, i simply don't use it so its off) - (https://www.npmjs.com/package/@electron/remote) 
 			                           //                 - Note this may have changed for newer electron versions (https://stackoverflow.com/questions/69059668/enableremotemodule-is-missing-from-electron-v14-typescript-type-definitions)
 			preload: path.join(__dirname, "preload.js") // use a preload script
 	    }
