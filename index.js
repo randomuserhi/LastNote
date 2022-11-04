@@ -1,3 +1,6 @@
+// ELECTRON DOCS LINK: 
+// (https://www.electronjs.org/docs/latest/api/app)
+
 const { app, BrowserWindow, ipcMain } = require("electron"); // Import app, BrowserWindow, ipcMain from electron module
 const path = require("path"); // Import path module
 const fs = require("fs"); // Import file system module
