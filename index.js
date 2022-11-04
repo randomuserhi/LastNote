@@ -14,7 +14,7 @@ async function CreateWindow()
 		frame: false, // remove the window frame
 		show: false, // hide the window
 		webPreferences: {
-	        nodeIntegration: false, // is default value after Electron v5
+	        nodeIntegration: false, // is default value after Electron v5 - is disabled as per security (https://www.electronjs.org/docs/latest/tutorial/security)
 			contextIsolation: true, // protect against prototype pollution - (https://www.electronjs.org/docs/latest/tutorial/context-isolation)
 			enableRemoteModule: false, // turn off remote - (https://www.npmjs.com/package/@electron/remote) 
 			                           //                 - Note this may have changed for newer electron versions (https://stackoverflow.com/questions/69059668/enableremotemodule-is-missing-from-electron-v14-typescript-type-definitions)
