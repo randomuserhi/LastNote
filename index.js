@@ -47,7 +47,7 @@ app.on("window-all-closed", function(){ // quit app on "window-all-closed" event
 });
 
 //Title bar controls
-//- https://www.electronjs.org/docs/latest/api/ipc-main
+//- [ipcMain](https://www.electronjs.org/docs/latest/api/ipc-main)
 
 ipcMain.on("closeWindow", () => { // when ipcMain recieves "closeWindow" event close the window
     win.close();
