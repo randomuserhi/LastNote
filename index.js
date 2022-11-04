@@ -6,6 +6,7 @@ let win; // Global variable to store main window
 
 /**
  * Creates the main browser window
+ * - about "async" keyword: (https://www.w3schools.com/js/js_async.asp)
  */
 async function CreateWindow()
 {
