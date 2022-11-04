@@ -5,6 +5,11 @@
 	--win-titleButton-hoverColor: #272733;
 }
 
+/**
+ * - "win" refers to window elements
+ * - "lastnote" refers to my custom base css assets ("lastnote" is simply the name of my project)
+ */
+
 * {
 	margin: 0;
 	padding: 0;
