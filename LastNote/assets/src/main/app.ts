@@ -1,6 +1,6 @@
 declare namespace RHU { 
     interface Modules {
-        "main": "appmount";
+        "appmount": "appmount";
     }
     
     namespace Macro {
@@ -15,24 +15,23 @@ interface appmount extends HTMLDivElement
 {
 }
 
-commonjs(["vs/editor/editor.main"], () => { RHU.module(new Error(), "main",
-    { Macro: "rhu/macro" },
+commonjs(new Error(), ["vs/editor/editor.main"], () => { RHU.module(new Error(), 
+    "appmount", { Macro: "rhu/macro" },
     function({ Macro })
     {
         const appmount = Macro((() => {
             const appmount = function(this: appmount)
             {
                 monaco.editor.create(this, {
-                    value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
                     language: 'typescript',
-                    automaticLayout: true
+                    automaticLayout: true,
                 });
             } as any as RHU.Macro.Constructor<appmount>;
             
             return appmount;
         })(), "appmount", /*html*/`
         `, {
-            element: /*html*/`<div></div>`
+            element: /*html*/`<div style="width: 100%; height:100%;"></div>`
         });
 
         return appmount;

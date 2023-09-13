@@ -12,8 +12,8 @@ declare namespace Loader {
     }
 }
 
-RHU.module(new Error(), "loader", 
-    {},
+RHU.module(new Error(), 
+    "loader", {},
     function()
     {
         interface Require {
@@ -32,8 +32,8 @@ RHU.module(new Error(), "loader",
     }
 );
 
-const commonjs = (imports: string[], callback: () => void) => {
-    RHU.require(new Error(), { Loader: "loader" }, 
+const commonjs = (trace: Error, imports: string[], callback: () => void) => {
+    RHU.require(trace, { Loader: "loader" }, 
         function({ Loader: { require } }) {
             require(imports, callback);
         }
