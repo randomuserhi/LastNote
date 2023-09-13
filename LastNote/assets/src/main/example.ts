@@ -24,7 +24,8 @@ commonjs(["vs/editor/editor.main"], () => { RHU.module(new Error(), "main",
             {
                 monaco.editor.create(this, {
                     value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
-                    language: 'javascript'
+                    language: 'typescript',
+                    automaticLayout: true
                 });
             } as any as RHU.Macro.Constructor<appmount>;
             
