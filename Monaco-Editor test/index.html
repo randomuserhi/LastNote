@@ -19,7 +19,7 @@
 	 - (https://stackoverflow.com/questions/65445255/content-security-policy-of-your-site-blocks-the-use-of-eval-in-javascript-wa#:~:text=The%20Content%20Security%20Policy%20(CSP,..)%20for%20evaluating%20strings.)
 	 - This is a non-issue, just be aware of it
 	-->
-	<meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+	<meta http-equiv="Content-Security-Policy" content="">
 
 	<title>Electron template window</title>
 </head>
@@ -55,9 +55,23 @@
 		</div>
 
 		<!-- app content goes here -->
+		<div id="container" style="width=100%; height:100%;">
+		</div>
 	</div>
 </body>
 
 <script src="control.js"></script> <!-- import control script for title bar buttons -->
+<!-- OR ANY OTHER AMD LOADER HERE INSTEAD OF loader.js -->
+<script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+<script>
+	require.config({ paths: { vs: './node_modules/monaco-editor/min/vs' } });
+
+	require(['vs/editor/editor.main'], function () {
+		var editor = monaco.editor.create(document.getElementById('container'), {
+			value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+			language: 'javascript'
+		});
+	});
+</script>
 
 </html>

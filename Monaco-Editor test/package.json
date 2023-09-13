@@ -7,7 +7,9 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "monaco-editor": "^0.43.0"
+  },
   "devDependencies": {
     "electron": "^21.0.0"
   },
