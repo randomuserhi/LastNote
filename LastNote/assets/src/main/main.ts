@@ -4,21 +4,18 @@ declare namespace RHU {
     }
     
     namespace Macro {
-        interface TemplateMap
-        {
+        interface TemplateMap {
             "appmount": appmount
         }      
     }
 }
 
-interface appmount extends HTMLDivElement
-{
+interface appmount extends HTMLDivElement {
 }
 
 commonjs(new Error(), ["vs/editor/editor.main"], () => { RHU.module(new Error(), 
     "appmount", { Macro: "rhu/macro" },
-    function({ Macro })
-    {
+    function({ Macro }) {
         const appmount = Macro((() => {
             const appmount = function(this: appmount)
             {

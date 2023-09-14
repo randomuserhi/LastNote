@@ -8,15 +8,13 @@ declare namespace RHU {
     }
     
     namespace Macro {
-        interface TemplateMap
-        {
+        interface TemplateMap {
             "win": win
         }      
     }
 }
 
-interface win extends HTMLElement
-{
+interface win extends HTMLElement {
     close: HTMLButtonElement;
     max: HTMLButtonElement;
     min: HTMLButtonElement;
@@ -24,8 +22,7 @@ interface win extends HTMLElement
 
 RHU.module(new Error(), 
     "icons", {},
-    function()
-    {
+    function() {
         return {
             crossIcon: /*html*/`
             <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">

@@ -4,15 +4,13 @@ declare namespace RHU {
     }
     
     namespace Macro {
-        interface TemplateMap
-        {
+        interface TemplateMap {
             "win": win
         }      
     }
 }
 
-interface win extends HTMLElement
-{
+interface win extends HTMLElement {
     close: HTMLButtonElement;
     max: HTMLButtonElement;
     min: HTMLButtonElement;
@@ -20,8 +18,7 @@ interface win extends HTMLElement
 
 RHU.module(new Error(), 
     "win", { Macro: "rhu/macro", style: "win/style", theme: "theme", appmount: "appmount", Icons: "icons" },
-    function({ Macro, theme, style, appmount, Icons })
-    {
+    function({ Macro, theme, style, appmount, Icons }) {
         Macro((() => {
             const win = function(this: win)
             {

@@ -15,8 +15,7 @@ type ColorName = keyof ColorScheme;
 
 RHU.module(new Error(), "theme",
     { Theme: "rhu/theme" },
-    function({ Theme })
-    {
+    function({ Theme }) {
         const style = Theme(({ theme }) => ({
             "background-tertiary": theme`#444557`,
             

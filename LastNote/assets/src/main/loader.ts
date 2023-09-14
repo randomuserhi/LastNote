@@ -14,8 +14,7 @@ declare namespace Loader {
 
 RHU.module(new Error(), 
     "loader", {},
-    function()
-    {
+    function() {
         interface Require {
             (paths: string[], callback: () => void): void;
             config: ({}) => void;

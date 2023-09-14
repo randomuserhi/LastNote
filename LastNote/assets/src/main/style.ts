@@ -12,8 +12,7 @@ declare namespace RHU {
 
 RHU.module(new Error(), "win/style",
     { Style: "rhu/style", theme: "theme" },
-    function({ Style, theme })
-    {
+    function({ Style, theme }) {
         const style = Style(({ style }) => {
             const frame = style.class<{
                 button: RHU.Style.ClassName;
