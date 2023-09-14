@@ -19,8 +19,8 @@ interface win extends HTMLElement
 }
 
 RHU.module(new Error(), 
-    "win", { Macro: "rhu/macro", style: "win/style", theme: "theme", appmount: "appmount" },
-    function({ Macro, theme, style, appmount })
+    "win", { Macro: "rhu/macro", style: "win/style", theme: "theme", appmount: "appmount", Icons: "icons" },
+    function({ Macro, theme, style, appmount, Icons })
     {
         Macro((() => {
             const win = function(this: win)
@@ -42,21 +42,15 @@ RHU.module(new Error(),
         <div class="${style.frame}">
             <!-- close button --> 
             <div rhu-id="close" class="${style.frame.button}" tabindex="-1" role="button" aria-label="Close">
-                <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
-                    <polygon fill="currentColor" fill-rule="evenodd" points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"></polygon>
-                </svg>
+                ${Icons.crossIcon}
             </div>
             <!-- maximize button --> 
             <div rhu-id="max" class="${style.frame.button}" tabindex="-1" role="button" aria-label="Maximize">
-                <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
-                    <rect width="9" height="9" x="1.5" y="1.5" fill="none" stroke="currentColor"></rect>
-                </svg>
+                ${Icons.squareIcon}
             </div>
             <!-- minimize button --> 
             <div rhu-id="min" class="${style.frame.button}" tabindex="-1" role="button" aria-label="Minimize">
-                <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
-                    <rect fill="currentColor" width="10" height="1" x="1" y="6"></rect>
-                </svg>
+                ${Icons.lineIcon}
             </div>
             <!-- title bar text -->
             <div class="${style.frame.text}">
