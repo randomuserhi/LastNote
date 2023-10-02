@@ -20,7 +20,7 @@ commonjs(new Error(), ["vs/editor/editor.main"], () => { RHU.module(new Error(),
             const appmount = function(this: appmount)
             {
                 monaco.editor.create(this, {
-                    language: 'typescript',
+                    language: 'python',
                     automaticLayout: true,
                 });
             } as any as RHU.Macro.Constructor<appmount>;
